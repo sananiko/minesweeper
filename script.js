@@ -93,7 +93,7 @@ function leftClick(button){
         button.style.color = map.colors[map.layout[row][col]];
         button.textContent = map.layout[row][col];
         if(map.clickCount >= (map.width*map.height-map.bombNum) && map.win == false)
-            winGame(button);
+            winGame();
     }
     else if(map.layout[row][col] == 0){
         var upperAndLower = {
@@ -110,7 +110,7 @@ function leftClick(button){
             }
         }
         if(map.clickCount >= (map.width*map.height-map.bombNum) && map.win == false)
-            winGame(button);
+            winGame();
     }
     else{
         button.style.backgroundColor = "red";
@@ -236,7 +236,7 @@ function gameover(){
         }
     }
 }
-function winGame(button){
+function winGame(){
     map.win = true;
     document.getElementsByTagName("h3")[0].textContent = "You win!"
     document.getElementById("lost").style.visibility = "visible";

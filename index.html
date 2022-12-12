@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src=./script.js></script>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Arcade</title>
+</head>
+<body>
+    <div id="home_screen">
+      <div id="box">
+        <h2>MINESWEEPER!</h2><hr><br><br>
+          <div id="difficulities">
+            <input type="button" value="Débutant" onclick="startGame('easy')">
+            <input type="button" value="Intermédiaire" onclick="startGame('medium')">
+            <input type="button" value="Expert" onclick="startGame('hard')">
+          </div>
+          <div id="field"></div>
+          <br>
+          <div id="lost" style="visibility: hidden;">
+            <h3>You got bombed!</h3>
+          </div>         
+      </div>
+      <div id="rules">
+          <h1>Règles</h1>
+          <p>Vous devez déminer ce champ de mines. Pour cela, il a été découpé en carrés pouvant contenir soit une seule mine, soit aucune.<br />
+            Au début, les mines ne sont pas visibles.<br />
+            Pour gagner au Démineur, il vous faut déterminer l'emplacement de toutes les mines.<br />
+            Pour atteindre cet objectif, vous pourrez prendre connaissance du nombre de mines  dans le voisinage immédiat d'une case, en cliquant sur celle-ci et à condition qu'elle soit vide.<br />
+            Si jamais vous cliquez sur une case contenant une mine, celle-ci explose 💣 et vous perdez.<br />
+            Il est possible de planter un drapeau 🚩 pour marquer l'emplacement supposé d'une mine, en faisant un clic droit.<br />
+            Si la case cliquée est vide, toutes les cases vides adjacentes s'ouvriront recursivement.<br />
+            Si vous cliquez sur un nombre visible avec le même nombre de drapeaux autour de lui, les boutons qui l'entourent seront cliqués<br />
+            Pour gagner, vous avez juste besoin de déterminer toutes les cases vides.</p>
+      </div>
+    </div>
+</body>
+</html>
